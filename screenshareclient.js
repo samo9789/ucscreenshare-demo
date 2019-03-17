@@ -22,8 +22,10 @@ var $callState = document.getElementById('callState');
 var $callId = document.getElementById('callId');
 
 function logon() {
-    // const ACCESS_TOKEN = '1e6d8b9bff5646c7b1e85e2fd9cea273';
-    // const ACCESS_TOKEN = '24fff8b771e54b86b2cbc16ec442ec89';
+    // const ACCESS_TOKEN = '1e6d8b9bff5646c7b1e85e2fd9cea273'; // Sam User
+    // const ACCESS_TOKEN = '24fff8b771e54b86b2cbc16ec442ec89'; // Sam GA User
+    // const ACCESS_TOKEN = '6b51c405a845484aa017ae4b392b10c9' // SAm User on githack
+
     const ACCESS_TOKEN = '';
     _client = new Circuit.Client({
       client_id: '4b83dfe402644d3bb921e79049198802',
@@ -158,11 +160,12 @@ function start()
 
     _client.startConference(selectedConvId, mediaType)
     .then(setCallUI)
-    .then(startScreenshare)
+    // .then(startScreenshare)
     .catch(function (err) {
         alert('Error starting conference. ' + err);
         console.error(err);
     });
+    setTimeout(startScreenshare, 5000);
 }
 
 function stop() {
