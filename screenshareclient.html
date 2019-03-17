@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UC Screenshare client</title>
+
+    <script src="//unpkg.com/circuit-sdk/circuit.js"></script>
+</head>
+<body>
+    <div style="display:grid;grid-template-columns: auto auto auto;margin-top:10px">
+        <div id="localName"></div>
+        <div id="remoteName1"></div>
+        <div id="remoteName2"></div>
+        <video id="localVideo" width="200px" autoplay="true"></video>
+        <video id="remoteVideo1" width="200px" autoplay="true"></video>
+        <video id="remoteVideo2" width="200px" autoplay="true"></video>
+        <video id="localDesktop" width="200px" autoplay="true"></video>
+        <video id="remoteDesktop1" width="200px" autoplay="true"></video>
+        <video id="remoteDesktop2" width="200px" autoplay="true"></video>
+    </div>
+    <button onclick="start()" id="#start">Start Screen Share</button>
+    <button onclick="stop()" id="#start">Stop Screen Share</button>
+
+    <div>Call state: <span id="callState"></span></div>    
+    <div>Call ID: <span id="callId"></span></div>
+
+    <script src="screenshareclient.js"></script>
+</body>
+</html>

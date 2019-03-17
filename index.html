@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Circuit Screenshare for UC</title>
+</head>
+<body>
+    <h1>Circuit Screenshare for UC</h1>
+    <h2>Bringing features to UC leveraging Circuit cPaaS</h2>
+    <p>
+        In the demo below, we have two users sharing their screen over Circuit backend using the Circuit JS SDK.
+        <br>
+        An "implicit" application is created on beta.circuit.com with clientID : 4b83dfe402644d3bb921e79049198802.
+        <br>
+        To skip the auth. steps on either side, we generated the Access Token by following the login flow once and storing the accessToken (_client.accessToken) for each user. 
+        <br>
+        In the left pane, we are connecting with user #1 <i>samantha.faw@unify.com</i>. AccesToken is 1e6d8b9bff5646c7b1e85e2fd9cea273. 
+        <br>
+        In the right pane, we are connecting with user #1 <i>samantha.halfon@gmail.com</i>. AccessToken is 24fff8b771e54b86b2cbc16ec442ec89. 
+        <br>
+        Upon page load, each frame performs its logon sequence for the user. 
+        <br>
+        A conference exists : 68949b94-402e-430c-82d4-cfc6503065a0
+        <br>
+        Each user can initiate the screen share, it will start the call in that conversation and start screensharing.
+        <br>
+        <p>
+            Screenshare requires the <a href="https://github.com/circuit/screenshare-chrome-extension">Circuit extension for Chrome</a>
+        </p>
+    </p>
+
+    <div id="demo">
+        <iframe src="screenshareclient.html" frameborder="0" id="leftDemo"></iframe>
+        <iframe src="screenshareclient.html" frameborder="0" id="rightDemo"></iframe>
+    </div>
+    
+</body>
+</html>
